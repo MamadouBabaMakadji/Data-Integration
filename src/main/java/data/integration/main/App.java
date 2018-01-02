@@ -52,14 +52,11 @@ public class App {
 
     public static void main(String[] args) {
         execute();
-        for(int i = 0; i < 3; i++){
-            String choix = choix();
-            if("OUI".equalsIgnoreCase(choix)){
-                execute();
-            }else {
-                if("NON".equalsIgnoreCase(choix))
-                    System.exit(0);
-            }
+        String choix = choix();
+        while("OUI".equalsIgnoreCase(choix)){
+            execute();
+            choix = choix();
         }
+        System.exit(0);
     }
 }

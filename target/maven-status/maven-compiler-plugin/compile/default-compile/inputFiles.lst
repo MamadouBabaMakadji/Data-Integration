@@ -1,7 +1,7 @@
-C:\Users\Mamadou BABA\IdeaProjects\DataIntegrationMediator\src\main\java\data\integration\mediator\Mediator.java
-C:\Users\Mamadou BABA\IdeaProjects\DataIntegrationMediator\src\main\java\data\integration\extractor\IExtractor.java
-C:\Users\Mamadou BABA\IdeaProjects\DataIntegrationMediator\src\main\java\data\integration\extractor\Source3ExtractorImpl.java
-C:\Users\Mamadou BABA\IdeaProjects\DataIntegrationMediator\src\main\java\data\integration\main\App.java
-C:\Users\Mamadou BABA\IdeaProjects\DataIntegrationMediator\src\main\java\data\integration\extractor\Source2ExtractorImpl.java
-C:\Users\Mamadou BABA\IdeaProjects\DataIntegrationMediator\src\main\java\data\integration\extractor\Source1ExtractorImpl.java
-C:\Users\Mamadou BABA\IdeaProjects\DataIntegrationMediator\src\main\java\data\integration\request\Request.java
+C:\Users\Mamadou BABA\IdeaProjects\Data-Integration\src\main\java\data\integration\extractor\Source3ExtractorImpl.java
+C:\Users\Mamadou BABA\IdeaProjects\Data-Integration\src\main\java\data\integration\extractor\Source1ExtractorImpl.java
+C:\Users\Mamadou BABA\IdeaProjects\Data-Integration\src\main\java\data\integration\extractor\Source2ExtractorImpl.java
+C:\Users\Mamadou BABA\IdeaProjects\Data-Integration\src\main\java\data\integration\main\App.java
+C:\Users\Mamadou BABA\IdeaProjects\Data-Integration\src\main\java\data\integration\mediator\Mediator.java
+C:\Users\Mamadou BABA\IdeaProjects\Data-Integration\src\main\java\data\integration\extractor\IExtractor.java
+C:\Users\Mamadou BABA\IdeaProjects\Data-Integration\src\main\java\data\integration\request\Request.java

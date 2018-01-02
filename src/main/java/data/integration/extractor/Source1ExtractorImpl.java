@@ -23,16 +23,18 @@ public class Source1ExtractorImpl implements IExtractor {
         try {
             inputStream = new FileInputStream(new File(source));
             workbook = new HSSFWorkbook(new POIFSFileSystem(inputStream));
-            Sheet firstSheet = workbook.getSheetAt(0);
-            Iterator<Row> iterator = firstSheet.iterator();
-            while (iterator.hasNext()) {
-                Row nextRow = iterator.next();
-                if("etudiant".equalsIgnoreCase(nextRow.getCell(3).getStringCellValue())){
-                    Cell cellProvenance = nextRow.getCell(4);
-                    if("France".equalsIgnoreCase(cellProvenance.getStringCellValue())){
-                        Cell cellID = nextRow.getCell(0);
-                        if(! (result.contains(cellID.getNumericCellValue())))
-                            result.add(cellID.getNumericCellValue());
+            for(int j = 0; j < workbook.getNumberOfSheets(); j++){
+                Sheet firstSheet = workbook.getSheetAt(j);
+                Iterator<Row> iterator = firstSheet.iterator();
+                while (iterator.hasNext()) {
+                    Row nextRow = iterator.next();
+                    if("etudiant".equalsIgnoreCase(nextRow.getCell(3).getStringCellValue())){
+                        Cell cellProvenance = nextRow.getCell(4);
+                        if("France".equalsIgnoreCase(cellProvenance.getStringCellValue())){
+                            Cell cellID = nextRow.getCell(0);
+                            if(! (result.contains(cellID.getNumericCellValue())))
+                                result.add(cellID.getNumericCellValue());
+                        }
                     }
                 }
             }
@@ -51,18 +53,20 @@ public class Source1ExtractorImpl implements IExtractor {
         try {
             inputStream = new FileInputStream(new File(source));
             workbook = new HSSFWorkbook(new POIFSFileSystem(inputStream));
-            Sheet firstSheet = workbook.getSheetAt(0);
-            Iterator<Row> iterator = firstSheet.iterator();
-            while (iterator.hasNext()) {
-                Row nextRow = iterator.next();
-                Cell cellLibelleCours = nextRow.getCell(8);
-                Cell cellStatut = nextRow.getCell(3);
-                if("ID".equalsIgnoreCase(cellLibelleCours.getStringCellValue()) && "etudiant".equalsIgnoreCase(cellStatut.getStringCellValue())){
-                    Cell cellNom = nextRow.getCell(1);
-                    Cell id = nextRow.getCell(0);
-                    if(!(identifiants.contains(id.getNumericCellValue()))){
-                        result.add(cellNom.getStringCellValue());
-                        identifiants.add(id.getNumericCellValue());
+            for(int j = 0; j < workbook.getNumberOfSheets(); j++){
+                Sheet firstSheet = workbook.getSheetAt(j);
+                Iterator<Row> iterator = firstSheet.iterator();
+                while (iterator.hasNext()) {
+                    Row nextRow = iterator.next();
+                    Cell cellLibelleCours = nextRow.getCell(8);
+                    Cell cellStatut = nextRow.getCell(3);
+                    if("ID".equalsIgnoreCase(cellLibelleCours.getStringCellValue()) && "etudiant".equalsIgnoreCase(cellStatut.getStringCellValue())){
+                        Cell cellNom = nextRow.getCell(1);
+                        Cell id = nextRow.getCell(0);
+                        if(!(identifiants.contains(id.getNumericCellValue()))){
+                            result.add(cellNom.getStringCellValue());
+                            identifiants.add(id.getNumericCellValue());
+                        }
                     }
                 }
             }
@@ -81,18 +85,20 @@ public class Source1ExtractorImpl implements IExtractor {
         try {
             inputStream = new FileInputStream(new File(source));
             workbook = new HSSFWorkbook(new POIFSFileSystem(inputStream));
-            Sheet firstSheet = workbook.getSheetAt(0);
-            Iterator<Row> iterator = firstSheet.iterator();
-            while (iterator.hasNext()) {
-                Row nextRow = iterator.next();
-                Cell cellLibelleCours = nextRow.getCell(8);
-                Cell cellStatut = nextRow.getCell(3);
-                if("SGBD".equalsIgnoreCase(cellLibelleCours.getStringCellValue()) && "enseignant".equalsIgnoreCase(cellStatut.getStringCellValue())){
-                    Cell cellNom = nextRow.getCell(1);
-                    Cell id = nextRow.getCell(0);
-                    if(!(identifiants.contains(id.getNumericCellValue()))){
-                        result.add(cellNom.getStringCellValue());
-                        identifiants.add(id.getNumericCellValue());
+            for(int j = 0; j < workbook.getNumberOfSheets(); j++){
+                Sheet firstSheet = workbook.getSheetAt(j);
+                Iterator<Row> iterator = firstSheet.iterator();
+                while (iterator.hasNext()) {
+                    Row nextRow = iterator.next();
+                    Cell cellLibelleCours = nextRow.getCell(8);
+                    Cell cellStatut = nextRow.getCell(3);
+                    if("SGBD".equalsIgnoreCase(cellLibelleCours.getStringCellValue()) && "enseignant".equalsIgnoreCase(cellStatut.getStringCellValue())){
+                        Cell cellNom = nextRow.getCell(1);
+                        Cell id = nextRow.getCell(0);
+                        if(!(identifiants.contains(id.getNumericCellValue()))){
+                            result.add(cellNom.getStringCellValue());
+                            identifiants.add(id.getNumericCellValue());
+                        }
                     }
                 }
             }
