@@ -1,0 +1,7 @@
+data\integration\main\App.class
+data\integration\mediator\Mediator.class
+data\integration\extractor\Source1ExtractorImpl.class
+data\integration\extractor\Source2ExtractorImpl.class
+data\integration\extractor\Source3ExtractorImpl.class
+data\integration\request\Request.class
+data\integration\extractor\IExtractor.class
